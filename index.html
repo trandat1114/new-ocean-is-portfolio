@@ -29,22 +29,26 @@
 <body>
   <svg class="doodle-bg" aria-hidden="true" viewBox="0 0 1200 800" preserveAspectRatio="none">
     <defs>
-      <pattern id="doodles" width="360" height="280" patternUnits="userSpaceOnUse">
-        <path d="M30 64c18-21 35 20 54-1 16-18 30 18 47-2" fill="none" stroke="#686861" stroke-width="2" stroke-linecap="round" opacity=".5"/>
-        <path d="M225 35l10 11-10 11m18-22l10 11-10 11" fill="none" stroke="#f2c443" stroke-width="2" stroke-linecap="round" opacity=".42"/>
-        <circle cx="80" cy="176" r="25" fill="none" stroke="#686861" stroke-width="2" opacity=".45"/>
-        <circle cx="80" cy="176" r="8" fill="none" stroke="#e5503d" stroke-width="2" opacity=".55"/>
-        <path d="M260 154c18-8 34 6 30 23-4 17-26 20-34 4-7-14 6-22 20-20" fill="none" stroke="#e5503d" stroke-width="2" stroke-linecap="round" opacity=".5"/>
-        <path d="M160 235h34m-17-17v34M20 245l12-12m0 12L20 233" stroke="#686861" stroke-width="2" stroke-linecap="round" opacity=".45"/>
-        <path d="M308 252c-12-10-22-8-27 4-5 13 8 20 18 14 9-5 17-1 22 7" fill="none" stroke="#f2c443" stroke-width="2" stroke-linecap="round" opacity=".45"/>
-      </pattern>
+      <filter id="warp-lines" x="-12%" y="-12%" width="124%" height="124%">
+        <feTurbulence type="fractalNoise" baseFrequency=".006 .024" numOctaves="2" seed="18" result="noise"/>
+        <feDisplacementMap in="SourceGraphic" in2="noise" scale="70" xChannelSelector="R" yChannelSelector="G"/>
+      </filter>
     </defs>
-    <rect width="1200" height="800" fill="url(#doodles)"/>
-    <g fill="none" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M70 115c18-28 45-28 61-2 13 22 40 21 54 0" stroke="#e5503d" stroke-width="3" opacity=".48"/>
-      <path d="M1010 106l18 20 33-42m-25 56l18 20 33-42" stroke="#f2c443" stroke-width="3" opacity=".46"/>
-      <path d="M1050 650c35-34 76 4 54 38-22 35-70 4-45-25 18-21 55-4 51 25" stroke="#e5503d" stroke-width="3" opacity=".42"/>
-      <path d="M142 690c25-20 53-12 67 13m-44-28l-8-19m29 16l14-16" stroke="#f2c443" stroke-width="3" opacity=".46"/>
+    <rect width="1200" height="800" fill="#e5503d" opacity=".46"/>
+    <g fill="none" stroke="#0c0c0d" stroke-linecap="round" stroke-width="22" filter="url(#warp-lines)" opacity=".94">
+      <path d="M-120 50C60-100 150 190 340 40S610-65 790 70s270 60 530-85"/>
+      <path d="M-160 135C50-35 150 260 350 120s260-145 460 5 300 100 560-70"/>
+      <path d="M-140 225C70 50 160 350 370 190s260-125 450 15 290 120 520-55"/>
+      <path d="M-180 325C40 130 170 460 390 280s250-120 430 40 310 100 540-85"/>
+      <path d="M-130 425C90 240 170 560 380 380s260-120 450 30 290 130 520-50"/>
+      <path d="M-170 530C40 340 160 670 370 480s270-120 470 35 280 130 520-60"/>
+      <path d="M-130 650C80 455 180 800 390 585s270-120 460 45 290 120 520-70"/>
+      <path d="M-180 770C30 570 150 920 360 700s280-110 470 45 290 140 540-55"/>
+    </g>
+    <g fill="none" stroke-linecap="round" filter="url(#warp-lines)">
+      <path d="M-100 94C100-20 190 230 380 95s260-90 440 25 290 70 510-30" stroke="#8c8b83" stroke-width="4" opacity=".65"/>
+      <path d="M-80 470C100 350 210 610 390 475s260-90 430 25 280 65 490-35" stroke="#f2c443" stroke-width="6" opacity=".72"/>
+      <path d="M-90 710C100 585 200 825 380 700s280-95 450 15 290 75 500-35" stroke="#8c8b83" stroke-width="4" opacity=".62"/>
     </g>
   </svg>
   <header class="top wrap"><a class="brand" href="#top">TRAN <i>/</i> DAT</a><nav class="nav"><a href="#evidence">Public work</a><a href="#work">Projects</a><a class="live" href="mailto:dattranphu1114@gmail.com">Available</a></nav></header>
